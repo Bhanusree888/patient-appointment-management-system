@@ -1,0 +1,20 @@
+SQL> desc appointment;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ APPOINTMENT_ID                            NOT NULL NUMBER
+ PATIENT_ID                                         NUMBER
+ NAME                                               VARCHAR2(30)
+ APPOINTMENT_TYPE                                   VARCHAR2(20)
+ APPOINTMENT_DATE                                   VARCHAR2(10)
+ APPOINTMENT_TIME                                   VARCHAR2(10)
+ IMAGE                                              LONG
+create sequence appointment appointment_seq start with 1 increment by 1;
+
+
+create or replace trigger appointment.trigger
+before insert on appointment 
+for each row
+begin
+select appointment_seq.NEXTVAL into:new.appointment_id from dual;
+end;   
+/
