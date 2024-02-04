@@ -1,0 +1,21 @@
+desc doctor
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ D_ID                                      NOT NULL NUMBER(38)
+ D_NAME                                             VARCHAR2(20)
+ D_ROLE                                             VARCHAR2(20)
+ D_MBLNO                                            VARCHAR2(10)
+ D_EMAIL                                            VARCHAR2(20)
+ D_ADDRESS                                          VARCHAR2(20)
+
+create sequence seq_doctor start with 100 increment by 1;
+
+
+create trigger doctor_trigger
+before insert 
+on doctor
+for each row 
+begin
+select seq_doctor into:new.d_id from dual;
+end;
+/
