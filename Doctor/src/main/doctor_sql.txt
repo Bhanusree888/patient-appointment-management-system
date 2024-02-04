@@ -8,6 +8,8 @@ desc doctor
  D_EMAIL                                            VARCHAR2(20)
  D_ADDRESS                                          VARCHAR2(20)
 
+
+
 create sequence seq_doctor start with 100 increment by 1;
 
 
