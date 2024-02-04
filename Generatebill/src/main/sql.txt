@@ -1,0 +1,19 @@
+SQL> desc generatebill
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ BILL_ID                                   NOT NULL NUMBER
+ PATIENT_ID                                         NUMBER
+ PATIENT_NAME                                       VARCHAR2(30)
+ MEDICINE_NAME                                      VARCHAR2(30)
+ DOCTOR_FEE                                         NUMBER(9)
+
+create sequence  generatebill_seq start with 1 increment by 1;
+
+
+ create or replace trigger generatebill_trigger
+  2  before insert on generatebill
+  3  for each row
+  4  begin
+  5  select generatebill_seq.nextval into:new.bill_id from dual;
+  6  end;
+  7  /
