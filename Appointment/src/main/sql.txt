@@ -8,7 +8,7 @@ SQL> desc appointment;
  APPOINTMENT_DATE                                   VARCHAR2(10)
  APPOINTMENT_TIME                                   VARCHAR2(10)
  IMAGE                                              LONG
-create sequence appointment appointment_seq start with 1 increment by 1;
+create sequence appointment_seq start with 1 increment by 1;
 
 
 create or replace trigger appointment.trigger
