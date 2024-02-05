@@ -1,4 +1,4 @@
-SQL> desc appointment;
+0SQL> desc appointment;
  Name                                      Null?    Type
  ----------------------------------------- -------- ----------------------------
  APPOINTMENT_ID                            NOT NULL NUMBER
