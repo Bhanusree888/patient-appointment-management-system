@@ -1,0 +1,33 @@
+ desc appointment;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ APPOINTMENT_ID                            NOT NULL NUMBER(38)    (pk)
+ PATIENT_FNAME                                      VARCHAR2(30)
+ PATIENT_GENDER                                     VARCHAR2(6)
+ PATIENT_AGE                                        NUMBER(38)
+ PATIENT_MBLNO                                      VARCHAR2(12)
+ PATIENT_EMAIL                                      VARCHAR2(50)
+ APPOINTMENT_TYPE                                   VARCHAR2(10)
+ APPOINTMENT_DATE                                   VARCHAR2(12)
+ APPOINTMENT_TIME                                   VARCHAR2(10)
+ PATIENT_PROBLEM                                    VARCHAR2(30)
+ PATIENT_ADDRESS                                    VARCHAR2(50)
+ DOCTOR_ID                                 NOT NULL NUMBER(38)  (foreign key)
+ PATIENT_LNAME                                      VARCHAR2(30)
+
+sequence of appointment:
+
+create sequence seq_appointment start with 501 increment by 1;
+
+
+trigger of appointment:
+
+
+create trigger appointment_trigger
+before insert 
+on appointment
+for each row
+begin
+select seq_appointment.nextval into:new.appointment_id from dual;
+end;
+/

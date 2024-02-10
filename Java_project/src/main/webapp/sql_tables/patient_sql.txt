@@ -1,0 +1,28 @@
+desc patient
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ P_ID                                      NOT NULL NUMBER(38) (pk)
+ P_GENDER                                           VARCHAR2(6)
+ P_MBLNO                                            VARCHAR2(12)
+ P_EMAIL                                            VARCHAR2(30)
+ P_ADDRESS                                          VARCHAR2(20)
+ P_NAME                                             VARCHAR2(20)
+ P_PWD                                              NUMBER(38)
+
+
+sequence of patient:
+
+create sequence seq_patient start with 6001 increment by 1;
+
+
+trigger of patient:
+
+
+create trigger patient_trigger
+before insert 
+on patient
+for each row
+begin
+select seq_patient.nextval into:new.p_id from dual;
+end;
+/
