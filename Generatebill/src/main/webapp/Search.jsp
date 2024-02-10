@@ -7,11 +7,11 @@
 <title>Edit Form</title>  
 </head>  
 <body>  
-<%@page import="com.Navaneetha.bean.UserDao1,com.Navaneetha.bean.User"%>  
+<%@page import="com.Navaneetha.bean.billuserdao,com.Navaneetha.bean.billuser"%>  
   
 <%  
 String id=request.getParameter("bill_id");  
-User u=UserDao1.getRecordById(Integer.parseInt(id));  
+User u=billuserdao.getRecordById(Integer.parseInt(id));  
 %>  
   
 <h1><%= u.getpatient_id()%></h1>  

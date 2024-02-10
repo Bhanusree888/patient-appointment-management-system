@@ -1,13 +1,24 @@
-SQL> desc appointment;
+<<<<<<< HEAD
+ desc appointment;
+=======
+0SQL> desc appointment;
+>>>>>>> 3ec078a97cf7dcd27fdebbd06758342f74cb1820
  Name                                      Null?    Type
  ----------------------------------------- -------- ----------------------------
- APPOINTMENT_ID                            NOT NULL NUMBER
- PATIENT_ID                                         NUMBER
- NAME                                               VARCHAR2(30)
- APPOINTMENT_TYPE                                   VARCHAR2(20)
- APPOINTMENT_DATE                                   VARCHAR2(10)
+ APPOINTMENT_ID                            NOT NULL NUMBER(38)
+ PATIENT_NAME                                       VARCHAR2(30)
+ PATEINT_GENDER                                     VARCHAR2(6)
+ PATIENT_AGE                                        NUMBER(38)
+ PATIENT_MBLNO                                      NUMBER(38)
+ PATIENT_EMAIL                                      VARCHAR2(50)
+ APPOINTMENT_TYPE                                   VARCHAR2(10)
+ APPOINTMENT_DATE                                   DATE
  APPOINTMENT_TIME                                   VARCHAR2(10)
- IMAGE                                              LONG
+ PATIENT_PROBLEM                                    VARCHAR2(30)
+
+SQL>
+
+
 create sequence appointment_seq start with 1 increment by 1;
 
 

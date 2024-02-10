@@ -8,14 +8,14 @@
 </head>
 <body>
 	<%@page
-		import="com.Navaneetha.bean.UserDao1,com.Navaneetha.bean.*,java.util.*"%>
+		import="com.Navaneetha.bean.billuserdao,com.Navaneetha.bean.*,java.util.*"%>
 	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 
 	<h1>Users List</h1>
 
 	<%
-	List<User> list = UserDao1.getAllRecords();
+	List<User> list = billuserdao.getAllRecords();
 	request.setAttribute("list", list);
 	%>
 	<form action="Search.jsp">
