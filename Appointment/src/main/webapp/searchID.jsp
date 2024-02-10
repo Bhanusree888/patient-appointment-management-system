@@ -7,11 +7,11 @@
 <title>Edit Form</title>  
 </head>  
 <body>  
-<%@page import="com.Navaneetha.bean.UserDao,com.Navaneetha.bean.User"%>  
+<%@page import="com.Navaneetha.bean.appUserDao,com.Navaneetha.bean.appuser"%>  
   
 <%  
 String id=request.getParameter("appointment_id");  
-User u=UserDao.getRecordById(Integer.parseInt(id));  
+User u=appUserDao.getRecordById(Integer.parseInt(id));  
 %>  
   
 <h1><%= u.getappointment_type()%></h1>  

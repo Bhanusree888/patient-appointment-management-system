@@ -1,4 +1,8 @@
+<<<<<<< HEAD
  desc appointment;
+=======
+0SQL> desc appointment;
+>>>>>>> 3ec078a97cf7dcd27fdebbd06758342f74cb1820
  Name                                      Null?    Type
  ----------------------------------------- -------- ----------------------------
  APPOINTMENT_ID                            NOT NULL NUMBER(38)
